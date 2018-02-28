@@ -1,0 +1,68 @@
+Angular JS -
+
+- AngularJS is an open source web application framework. 
+- Originally developed in 2009 by Misko Hevery and Adam Abrons. It is now maintained by Google. Its latest version is 1.4.3.
+- Defination - 
+	AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you currently have to write. And it all happens within the browser, making it an ideal partner with any server technology.
+- The AngularJS Components
+  The AngularJS framework can be divided into following three major parts −
+	ng-app − This directive defines and links an AngularJS application to HTML.
+	ng-model − This directive binds the values of AngularJS application data to HTML input controls.
+	ng-bind − This directive binds the AngularJS Application data to HTML tags.
+
+- Point to AngularJS app -
+	Part of the HTML contains the AngularJS app. This done by adding the ng-app attribute to the root HTML element of the AngularJS app. You can either add it to html element or body element as shown below −		
+	<body ng-app = "myapp">
+	</body>
+
+- View
+	The view is this part −
+	<div ng-controller = "HelloController" >
+	   <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
+	</div>
+	ng-controller tells AngularJS what controller to use with this view. helloTo.title tells AngularJS to write the "model" value named helloTo.title to the HTML at this location.
+
+- Controller
+	The controller part is −
+	   angular.module("myapp", [])
+	   .controller("HelloController", function($scope) {
+	      $scope.helloTo = {};
+	      $scope.helloTo.title = "AngularJS";
+	   });
+	- this register HelloController to myapp angular module   
+
+- Working -
+	HTML document is loaded into the browser, and evaluated by the browser. 
+	AngularJS JavaScript file is loaded, the angular global object is created. 
+	JavaScript which registers controller functions is executed.
+	AngularJS scans through the HTML to look for AngularJS apps and views. 
+	Once view is located, it connects that view to the corresponding controller function.
+	AngularJS executes the controller functions. It then renders the views with data from the model populated by the controller. 
+	The page is now ready.
+
+- MVC
+	- Software design pattern for developing web applications.
+		Model − It is the lowest level of the pattern responsible for maintaining data.
+		View − It is responsible for displaying all or a portion of the data to the user.
+		Controller − It is a software Code that controls the interactions between the Model and View.
+
+MVC is popular because it isolates the application logic from the user interface layer and supports separation of concerns. 
+The controller receives all requests for the application and then works with the model to prepare any data needed by the view. 
+The view then uses the data prepared by the controller to generate a final presentable response.
+
+AngularJS MVC
+The Model
+The model is responsible for managing application data. It responds to the request from view and to the instructions from controller to update itself.
+
+The View
+A presentation of data in a particular format, triggered by the controller's decision to present the data. They are script-based template systems such as JSP, ASP, PHP and very easy to integrate with AJAX technology.
+
+The Controller
+The controller responds to user input and performs interactions on the data model objects. The controller receives input, validates it, and then performs business operations that modify the state of the data model.
+
+AngularJS is a MVC based framework. In the coming chapters, we will see how AngularJS uses MVC methodology.	
+
+
+Exception	ArgumentOutOfRangeException	217	Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index	
+00:01:16	GXPC010192	FactoringCompany_SearchByCarrier	Scenario1	https://qa2web30/Coyote.Client.WebApi/v1/factoringCompanies/20210/carriers	Extraction Rule Error	ExtractText	StartsWith text was not found in the response	-	Test log	
